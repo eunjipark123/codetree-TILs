@@ -10,6 +10,9 @@
 # c = a + b 
 # print("c =",c)
 
-a = 97
-b = 13
-print(f"{a} - {b} = {a-b}")
+# a = 97
+# b = 13
+# print(f"{a} - {b} = {a-b}")
+
+a, b = 97, 13
+print(a, "-", b, "=", a-b)
