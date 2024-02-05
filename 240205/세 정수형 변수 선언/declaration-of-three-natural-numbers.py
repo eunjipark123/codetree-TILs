@@ -27,7 +27,7 @@
 # print(f"B is {b}")
 # print(f"A is {a} and B is {b}")
 
-# a, b, c = 7, 23, 30
+a, b, c = 7, 23, 30
 # # 변수 포맷
 # print("%d + %d = %d" % (a , b, c))
 # # format
