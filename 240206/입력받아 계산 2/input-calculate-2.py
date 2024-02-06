@@ -12,6 +12,15 @@
 
 # print(f"{a[0]}은(는) 첫 번째로 입력된 녀석입니다. ")
 
-a = input().split()
-multi = int(a[0]) * int(a[1])
-print(multi)
+# a = input().split()
+# multi = int(a[0]) * int(a[1])
+# print(multi)
+
+# 해설 방법
+inp = input()
+arr = inp.split()
+a = int(arr[0])
+b = int(arr[1])
+
+# 출력
+print(a * b)
