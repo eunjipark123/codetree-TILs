@@ -4,8 +4,8 @@ fin = int(arr[1])
 
 if mid >= 90:
     if fin >= 95:
-        print(10)
+        print(100000)
     elif fin >= 10:
-        print(5)
+        print(50000)
 else:
     print(0)
