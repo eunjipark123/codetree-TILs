@@ -6,7 +6,7 @@ a, b = int(arr[0]), int(arr[1])
 
 d = a % b * 10
 result = 0
-result2 = "0."
+result2 = str(a//b)+"."
 lists = []
 
 for _ in range(20):
