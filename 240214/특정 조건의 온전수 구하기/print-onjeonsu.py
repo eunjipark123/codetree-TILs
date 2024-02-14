@@ -4,7 +4,17 @@
 
 n = int(input())
 
+# for i in range(1, n + 1):
+#     if i % 2 != 0 and i % 10 != 5 and (i % 9 == 0 or i % 3 != 0):
+#         print(i, end = " ")
+#         continue
+
+
 for i in range(1, n + 1):
-    if i % 2 != 0 and i % 10 != 5 and (i % 9 == 0 or i % 3 != 0):
-        print(i, end = " ")
+    if i % 2 == 0:
         continue
+    if i % 10 == 5:
+        continue
+    if i % 3 == 0 and i % 9 != 0:
+        continue
+    print(i, end = " ")
