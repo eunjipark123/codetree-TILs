@@ -1,10 +1,10 @@
 arr = input().split()
 a, b, c = int(arr[0]), int(arr[1]), int(arr[2])
-satisfied = False
+satisfied = True
 
 for i in range(a, b + 1):
     if i % c != 0:
-        satisfied = True
+        satisfied = False
         break
 
-print("YES") if satisfied == True else print("No")
+print("YES") if satisfied == False else print("NO")
