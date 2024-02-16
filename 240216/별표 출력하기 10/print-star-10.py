@@ -19,11 +19,19 @@ n = int(input())
 #     print()
 
 
-for i in range(2*n):
-    if i % 2 == 0:
-        for _ in range(i // 2 + 1):
-            print("*", end = " ")
-    else:
-        for _ in range(n - i//2, 0, -1):
-            print("*", end = " ")
+# for i in range(2*n):
+#     if i % 2 == 0:
+#         for _ in range(i // 2 + 1):
+#             print("*", end = " ")
+#     else:
+#         for _ in range(n - i//2, 0, -1):
+#             print("*", end = " ")
+#     print()
+
+for i in range(1, n + 1):
+    for _ in range(i):
+        print("* ", end = "")
+    print()
+    for _ in range(n - i + 1):
+        print("* ", end = "")
     print()
