@@ -1,9 +1,9 @@
-# n = 3
+n = int(input())
 
-# for i in range(n):
-#     for j in range(n):
-#         print(i * n + j + 1, end = " ")
-#     print()
+for i in range(n):
+    for j in range(n):
+        print(i * n + j + 1, end = " ")
+    print()
 
 # cnt = 1
 # for i in range(2):
@@ -12,11 +12,11 @@
 #         cnt += 1
 #     print()
 
-n = int(input())
-cnt = 1
+# n = int(input())
+# cnt = 1
 
-for i in range(n):
-    for j in range(n):
-        print(cnt, end = " ")
-        cnt += 1
-    print()
+# for i in range(n):
+#     for j in range(n):
+#         print(cnt, end = " ")
+#         cnt += 1
+#     print()
