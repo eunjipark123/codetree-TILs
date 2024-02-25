@@ -14,6 +14,6 @@ for i in tests:
     sum_val += i
     cnt += 1
 
-avg = sum_val / cnt
+avg = round(sum_val / cnt, 1)
 
 print(sum_val, avg)
