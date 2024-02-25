@@ -17,4 +17,7 @@ for i in range(9):
     else:
         sum_odds += arr[i]
 
-print(abs(sum_even - sum_odds))
+if sum_odds >= sum_even:
+    print(sum_odds - sum_even)
+else:
+    print(sum_even - sum_odds)
