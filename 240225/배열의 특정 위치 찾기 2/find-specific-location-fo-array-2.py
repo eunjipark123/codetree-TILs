@@ -11,11 +11,11 @@ arr = list(map(int, input().split()))
 
 sum_even = 0
 sum_odds = 0
-for i in range(9):
-    if (i + 1) % 2 == 0:
-        sum_even += arr[i]
-    else:
+for i in range(10):
+    if i % 2 == 0:
         sum_odds += arr[i]
+    else:
+        sum_even += arr[i]
 
 if sum_odds >= sum_even:
     print(sum_odds - sum_even)
