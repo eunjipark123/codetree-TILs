@@ -2,7 +2,7 @@ inputs = list(map(int, input().split()))
 a, b = inputs[0], inputs[1]
 rest = [0] * b
 
-while a > 0:
+while a > 1:
     a //= b
     rest[a % b] += 1
 
