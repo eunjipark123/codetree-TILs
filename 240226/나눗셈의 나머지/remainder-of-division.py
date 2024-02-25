@@ -3,8 +3,8 @@ a, b = inputs[0], inputs[1]
 rest = [0] * b
 
 while a > 1:
-    a //= b
     rest[a % b] += 1
+    a //= b
 
 rest_sum = 0
 
