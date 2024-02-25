@@ -6,7 +6,6 @@ if_true = False
 
 for i in arr:
     if i >= 250:
-        if_true = True
         break
     tests.append(i)
 
@@ -14,6 +13,6 @@ for i in tests:
     sum_val += i
     cnt += 1
 
-avg = round(sum_val / cnt, 1)
+avg = sum_val / cnt
 
-print(sum_val, avg)
+print(f"{sum_val} {avg:.1f}")
