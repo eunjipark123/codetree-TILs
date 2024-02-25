@@ -6,11 +6,13 @@ for student in range(n):
     sum_val = 0
     cnt = 0
 
-    for score in scores:
-        sum_val += score
-        cnt += 1
+    sum_val = sum(scores)
+    avg = sum_val / 4
+    # for score in scores:
+    #     sum_val += score
+    #     cnt += 1
 
-    avg = sum_val / cnt
+    # avg = sum_val / cnt
 
     if avg >= 60:
         print("pass")
