@@ -5,7 +5,7 @@ for _ in range(3):
     if arr[0] == 'Y' and int(arr[1]) >= 37:
         arr_cnt[0] += 1
     elif arr[0] == 'N' and int(arr[1]) >= 37:
-        arrn_cnt[1] += 1
+        arr_cnt[1] += 1
     elif arr[0] == 'Y' and int(arr[1]) < 37:
         arr_cnt[2] += 1
     else:
