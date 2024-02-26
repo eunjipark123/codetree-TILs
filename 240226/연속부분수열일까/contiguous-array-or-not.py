@@ -13,19 +13,18 @@ if b[0] not in a:
 
 # 있다면 해당 원소가 있는 a의 위치를 찾음
 else:
-    start_idx = [idx for idx in range(len_a) if a[idx] == b[0]]
-    
-    
+    start_idx = [idx for idx, val in enumerate(a) if val == b[0]]
+
+# 원소 탐색
     for i in start_idx:
-        flags = False
-
-        if len(a[i:]) >= len_b:
-            new_a = a[i:i+len_b]
-            if new_a == b:
-                flags = True
-                break    
-
-    if flags:
-        print("Yes")
-    else:
-        print("No")
+        # 길이가 짧으면 넘어감
+        if len(a[i:]) < len_b:
+            continue
+        
+        # 두 길이가 같으면 연속부분수열로 인정 -> 바로 yes 치기
+        if a[i:i + len_b] == b:
+            print("Yes")
+            break
+    
+    # 다 돌려봤는데 이도 저도 아니라면 No
+    print("No")
