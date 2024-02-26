@@ -6,9 +6,11 @@ max_val = arr[0]
 for elem in arr:
     if elem > max_val:
         max_val = elem
-    
+
+max_idx = arr.index(max_val)        
+
 for i in range(n):
-    if arr[i] == max_val:
+    if i == max_idx:
         arr[i] = -2**31
 
 sec_max_val = arr[0]
