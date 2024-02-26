@@ -17,18 +17,13 @@ else:
     
     
     for i in start_idx:
-        # 그 위치부터의 원소의 갯수를 세서, b의 원소 갯수보다 적다면 무조건 탈락
-        if len(a[i:]) < len_b:
-            print("No")
-            break
-
-        # 아니라면 a를 해당 길이만큼 슬라이싱해서 두 배열이 같은지 Flag로 확인            
-        new_a = a[i:i+len_b]
         flags = False
-        
-        if new_a == b:
-            flags = True
-            break
+
+        if len(a[i:]) >= len_b:
+            new_a = a[i:i+len_b]
+            if new_a == b:
+                flags = True
+                break    
 
     if flags:
         print("Yes")
