@@ -27,4 +27,5 @@ else:
             break
     
     # 다 돌려봤는데 이도 저도 아니라면 No
+    else:
         print("No")
