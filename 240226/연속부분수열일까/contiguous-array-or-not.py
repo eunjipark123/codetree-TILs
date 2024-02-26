@@ -12,7 +12,6 @@ if b[0] not in a:
     print("No")
 
 # 있다면 해당 원소가 있는 a의 위치를 찾음
-start_idx = []
 else:
     start_idx = [idx for idx in range(len_a) if a[idx] == b[0]]
     
@@ -35,16 +34,3 @@ else:
         print("Yes")
     else:
         print("No")
-        
-            
-
-
-        
-    # if in_bool == False:
-    #     print("No")
-    # else:
-    #     print("Yes")
-    # test
-# len_a, len_b = 13, 6
-# a = [1, 2, 5, 2, 5, 2, 3, 2, 5, 2, 5, 2, 5]
-# b = [2, 5, 2, 5, 2, 5]
