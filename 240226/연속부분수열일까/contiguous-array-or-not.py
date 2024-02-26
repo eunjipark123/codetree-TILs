@@ -17,16 +17,21 @@ for i in range(len_b):
         in_bool = False
         break    
 
+if in_bool:
     idx_first = a.index(b[0])
     idx_last = a.index(b[0]) + len_b
     
-    for j in range(idx_first, idx_last):
-        if b[i] != a[j]:
-            in_bool = False 
+    idx_b = 0
+    b_elem = b[idx_b]
+    
+    for elem in a[idx_first:idx_last]: 
+        if elem != b_elem:
+            in_bool = False
             break
-
-
-
+        else:
+            idx_b += 1
+    
+    
 if in_bool == False:
     print("No")
 else:
