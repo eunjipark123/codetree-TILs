@@ -1,3 +1,6 @@
+# 10 6
+# 9 2 4 1 3 3 1 4 6 8
+# 4 1 3 3 1 4
 # 수열 갯수 값 받기
 ab = input().split()
 len_a, len_b = int(ab[0]), int(ab[1])
@@ -6,10 +9,14 @@ len_a, len_b = int(ab[0]), int(ab[1])
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
+# 테스트케이스
+# len_a, len_b = 10, 6
+# a = [9, 2, 4, 1, 3, 3, 1, 4, 6, 8]
+# b = [4, 1, 3, 3, 1, 4]
+
 # 원소가 a에 들어있는지 확인하기 위한 flag
 in_bool = True
 # b의 첫 수열이 포함된 a의 인덱스를 idx_first, 마지막 수열이 포함된 a의 인덱스를 idx_last라고 하면
-
 
 for i in range(len_b):
     # 들어있지 않다면 연속부분수열일 수 없음
@@ -21,16 +28,11 @@ if in_bool:
     idx_first = a.index(b[0])
     idx_last = a.index(b[0]) + len_b
     
-    idx_b = 0
-    b_elem = b[idx_b]
-    
-    for elem in a[idx_first:idx_last]: 
-        if elem != b_elem:
+    new_a = a[idx_first:idx_last]
+    for idx in range(len_b):
+        if new_a[idx] != b[idx]:
             in_bool = False
-            break
-        else:
-            idx_b += 1
-    
+            break   
     
 if in_bool == False:
     print("No")
