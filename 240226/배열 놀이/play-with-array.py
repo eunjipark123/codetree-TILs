@@ -11,16 +11,17 @@ for _ in range(q):
 
     if quest[0] == 1:
         a = quest[1]
-        print(elements[a-1])
+        print(elements[a-1], end = "")
     
     elif quest[0] == 2:
         a = quest[1]
         if a in elements:
-            print(elements.index(a)+1)
+            print(elements.index(a)+1, end = "")
         else:
-            print(0)
+            print(0, end = "")
     
     else:
         a, b = quest[1], quest[2]
         for i in range(a - 1, b):
             print(elements[i], end = " ")
+    print()
