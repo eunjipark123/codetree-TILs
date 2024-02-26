@@ -3,14 +3,14 @@ n, m = int(arr[0]), int(arr[1])
 
 numbers = list(map(int, input().split()))
 
-# print(numbers.count(m))
+print(numbers.count(m))
 
-cnt = 0
-for i in numbers:
-    if i == m:
-        cnt += 1
+# cnt = 0
+# for i in numbers:
+#     if i == m:
+#         cnt += 1
 
-print(cnt)
+# print(cnt)
 
 
 
