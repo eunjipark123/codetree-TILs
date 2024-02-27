@@ -8,14 +8,23 @@ arr = [
 
 num = 1
 
+# 이렇게 풀이했을 때는 arr이 업데이트 되지 않음 / 이렇게 풀 필요도 없음;; 
+# for row in arr:
+#     for elem in row:
+#         print(num, end = " ")
+#         num += 1
+#     print()
+
+
+for i in range(n):
+    for j in range(m):
+        arr[i][j] = num
+        num += 1
+
 for row in arr:
     for elem in row:
-        print(num, end = " ")
-        num += 1
+        print(elem, end = " ")
     print()
-
-
-
 
 
 
