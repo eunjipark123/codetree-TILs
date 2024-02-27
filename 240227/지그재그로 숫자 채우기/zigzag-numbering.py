@@ -17,9 +17,10 @@ arr_final = [[0 for _ in range(m)] for _ in range(n)]
 
 for i in range(n):
     for j in range(m):
-        arr_final[i][j] = arr[j][i]
-
-for row in arr_final:
-    for elem in row:
-        print(elem, end = " ")
+        print(arr[j][i], end = " ")
     print()
+
+# for row in arr_final:
+#     for elem in row:
+#         print(elem, end = " ")
+#     print()
