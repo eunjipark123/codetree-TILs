@@ -6,16 +6,14 @@ arr_2d = [
 ]
 
 for i in range(n):
-    for j in range(i+1):
-        arr_2d[i][0] = 1
-        arr_2d[i][i] = 1
+    arr_2d[i][0] = 1
+    arr_2d[i][i] = 1
     
 for i in range(1, n):
-    for j in range(1, i+1):
+    for j in range(1, i):
         arr_2d[i][j] = arr_2d[i-1][j-1] + arr_2d[i-1][j]
 
-for row in arr_2d:
-    for elem in row:
-        if elem > 0:
-            print(elem, end = " ")
+for i in range(n):
+    for j in range(i+1):
+        print(arr_2d[i][j], end = " ")
     print()
