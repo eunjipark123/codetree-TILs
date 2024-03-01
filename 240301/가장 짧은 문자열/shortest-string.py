@@ -6,15 +6,15 @@ a = len(a)
 b = len(b)
 c = len(c)
 
-if a > b > c:
+if a >= b >= c:
     print(a - c)
-elif a > c > b:
+elif a >= c >= b:
     print(a - b)
-elif b > a > c:
+elif b >= a >= c:
     print(b - c)
-elif b > c > a:
+elif b >= c >= a:
     print(b - a)
-elif c > a > b:
+elif c >= a >= b:
     print(c - b)
-elif c > b > a:
+elif c >= b >= a:
     print(c - a)
