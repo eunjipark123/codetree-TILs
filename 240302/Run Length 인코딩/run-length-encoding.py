@@ -1,10 +1,16 @@
+# 입력 받기 
 string = input()
 leng = len(string)
+
+# 글자와 길이를 담을 리스트 만들기
 letters = []
 length = []
-run_length = []
-cnt = 1
 
+# 변수 설정
+cnt = 1
+val = ""
+
+# letters, length 넣기
 for i in range(leng):
     # 처음에는 글자만 넣어주기
     if i == 0:
@@ -22,10 +28,12 @@ for i in range(leng):
 # 마지막 글자 수 추가
 length.append(cnt)
 
+# run_length_encoding 만들어주기
 for i in range(len(letters)):
-    run_length.append(letters[i])
-    run_length.append(length[i])
+    # letters, length 모두 
+    val += str(letters[i]) 
+    val += str(length[i])
 
-print(len(run_length))
-for elem in run_length:
-    print(elem, end = "")
+# 출력
+print(len(val))
+print(val)
