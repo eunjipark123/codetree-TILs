@@ -17,9 +17,9 @@ else:
     n = len(new_string) // 5 + 1
     m = len(new_string) % 5
 
-    for i in range(5):
+    for i in range(n):
         if i < n-1:
-            for j in range(n):
+            for j in range(5):
                 print(new_string[i * 5 + j], end = "")
 
         else:
