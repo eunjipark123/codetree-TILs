@@ -4,7 +4,7 @@
 # print(new_string)
 
 string = input()
-string += "hello"
+string += "Hello"
 
 print(string)
 # a, b, c = "apple", "banana", "candy"
