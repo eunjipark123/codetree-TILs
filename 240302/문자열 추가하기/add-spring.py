@@ -1,8 +1,12 @@
+# string = input()
+
+# new_string = string + "Hello"
+# print(new_string)
+
 string = input()
+string += "hello"
 
-new_string = string + "Hello"
-print(new_string)
-
+print(string)
 # a, b, c = "apple", "banana", "candy"
 
 # tot_str = ""
