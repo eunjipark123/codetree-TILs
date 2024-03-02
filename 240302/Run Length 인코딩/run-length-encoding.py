@@ -1,5 +1,4 @@
 string = input()
-string = 'aaabbbbcbb'
 leng = len(string)
 letters = []
 run_length = []
