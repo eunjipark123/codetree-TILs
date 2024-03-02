@@ -1,6 +1,7 @@
 string = input()
 leng = len(string)
 letters = []
+length = []
 run_length = []
 cnt = 1
 
@@ -13,14 +14,18 @@ for i in range(leng):
     # 다른 문자로 변경했을 때 리스트에 문자와 cnt수 추가
     if string[i] != string[i-1]:
         letters.append(string[i])
-        run_length.append(cnt)
+        length.append(cnt)
         cnt = 1    
         continue
     cnt += 1
 
 # 마지막 글자 수 추가
-run_length.append(cnt)
+length.append(cnt)
 
 for i in range(len(letters)):
-    print(letters[i], end = "")
-    print(run_length[i], end = "")
+    run_length.append(letters[i])
+    run_length.append(length[i])
+
+print(len(run_length))
+for elem in run_length:
+    print(elem, end = "")
