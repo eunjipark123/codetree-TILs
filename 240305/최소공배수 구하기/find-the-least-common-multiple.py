@@ -1,12 +1,13 @@
 n, m = tuple(map(int, input().split()))
 
 def last_common_multiple(n, m):
-    num = m
-    while True:
-        if num % n == 0 and num % m == 0:
-            print(num)
-            break
-        
-        num += 1
+    gcd = 0
+    for i in range(1, min(n, m) + 1):
+        if n % i == 0 and m % i == 0:
+            gcd = i
+    
+    print(n * m // gcd)
+
+
 
 last_common_multiple(n, m)
