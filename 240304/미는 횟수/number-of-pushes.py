@@ -1,10 +1,23 @@
 a = input()
 b = input()
 
-n = 0
+if len(a) != len(b):
+    print(-1)
 
-while a != b:
-    a = a[-1] + a[:-1]
-    n += 1
+else:
+    n = 0
+    leng = len(a)
+    flag = -1
+    
+    for i in range(leng):
+        a = a[-1] + a[:-1]
+        n += 1
+        
+        if a == b:
+            flag = 1
+            break
 
-print(n)
+    if flag == 1:
+        print(n)
+    else:
+        print(-1)
