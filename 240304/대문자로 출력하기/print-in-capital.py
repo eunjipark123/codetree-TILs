@@ -1,12 +1,14 @@
 # 문제
 string = input()
 
-for i in string:
-    if not i.isalpha():
-        continue
+# for i in string:
+#     if not i.isalpha():
+#         continue
     
-    print(i.upper(), end = "")
+#     print(i.upper(), end = "")
 
+string = ''.join(char.upper() for char in string if char.isalpha())
+print(string)
 
 
 # 개념
