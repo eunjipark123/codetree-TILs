@@ -1,9 +1,19 @@
 a, b, c = tuple(map(int, input().split()))
 
-def min_value_creator(*args):
-    return min(args)
+def min_value_creator(a, b, c):
+    min_val = a
+    if min_val > b:
+        min_val = b
+    if min_val > c:
+        min_val = c
+
+    return min_val
 
 print(min_value_creator(a, b, c))
+# def min_value_creator(*args):
+#     return min(args)
+
+# print(min_value_creator(a, b, c))
 
 
 # 개념 
