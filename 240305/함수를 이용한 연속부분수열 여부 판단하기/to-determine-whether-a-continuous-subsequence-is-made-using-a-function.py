@@ -3,8 +3,9 @@ num_a, num_b = tuple(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
+
 def is_continuous_partial_sequence(num_a, num_b, a, b):
-    for i in range(num_a - num_b):
+    for i in range(num_a - num_b + 1):
         if a[i:i + num_b] == b:
             return True
             break
