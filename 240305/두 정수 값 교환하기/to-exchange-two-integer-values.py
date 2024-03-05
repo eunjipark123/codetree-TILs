@@ -4,5 +4,5 @@ def swap(a, b):
     a, b = b, a
     return a, b
 
-for elem in swap(n, m):
-    print(elem, end = " ")
+n, m = swap(n, m)
+print(n, m)
