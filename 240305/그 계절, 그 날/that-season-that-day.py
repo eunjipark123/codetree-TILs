@@ -1,5 +1,4 @@
 y, m, d = tuple(map(int, input().split()))
-
 def is_leap_year(y):
     if y % 4 == 0:
         return True
@@ -24,12 +23,12 @@ def define_seasons(m):
     if m >= 6 and m < 9:
         return 'Summer'
     if m >= 9 and m < 12:
-        return 'summer'    
+        return 'Fall'    
     else:
         return 'Winter'
 
 def date_existence_with_seasons(y, m, d):
-    if m <= 12 and d <= last_date_month_by_year(y, m):
+    if d <= last_date_month_by_year(y, m):
         return define_seasons(m)
     
     return -1
