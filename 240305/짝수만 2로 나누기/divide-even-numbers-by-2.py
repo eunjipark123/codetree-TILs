@@ -6,8 +6,6 @@ def even_divider(arr):
         if arr[i] % 2 != 0:
             continue
         arr[i] //= 2
-    
-    return arr
 
 for elem in even_divider(arr[:]):
     print(elem, end = " ")
