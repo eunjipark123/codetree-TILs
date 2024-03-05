@@ -6,7 +6,7 @@ def judge_more_than_2_alpha(a):
         return False
     
     for i in range(1, len(a)):
-        if a[i] not in a[:i]:
+        if a[i] != a[0]:
             return True    
     
     return False 
