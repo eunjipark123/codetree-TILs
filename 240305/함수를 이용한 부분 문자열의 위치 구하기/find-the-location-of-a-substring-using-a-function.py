@@ -7,6 +7,7 @@ def idx_finder():
     for i in range(len(input_str)):
         if input_str[i:i + len(target_str)] == target_str:
             idx = i
+            break
 
     return idx
     
