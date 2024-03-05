@@ -1,5 +1,4 @@
 m, d = tuple(map(int, input().split()))
-m, d = 13, 13
 def date_by_month_2021(m):
     if m > 12:
         date = []
