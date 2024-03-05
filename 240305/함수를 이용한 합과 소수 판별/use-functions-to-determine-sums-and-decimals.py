@@ -16,9 +16,15 @@ def sum_digit(n):
     
     return sum_digit
 
+def judge_number(n):
+    if sum_digit(i) % 2 == 0 and is_prime(i):
+        return True
+    
+    return False 
+
 cnt = 0
 for i in range(a, b + 1):
-    if sum_digit(i) % 2 == 0 and is_prime(i):
+    if judge_number(i):
         cnt += 1
 
 print(cnt)
