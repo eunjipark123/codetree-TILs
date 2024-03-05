@@ -1,12 +1,10 @@
 y, m, d = tuple(map(int, input().split()))
 def is_leap_year(y):
-    if y % 4 == 0:
-        return True
-    if y % 100 == 0:
+    if y % 4 != 0:
         return False
-    if y % 400 == 0:
-        return True
-    return False
+    if (y % 100) == 0 and (y % 400) != 0 :
+        return False
+    return True
 
 def last_date_month_by_year(y, m):
     if m == 2:
