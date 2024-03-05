@@ -10,7 +10,8 @@ def even_divider(arr):
     
     return arr
 
-for elem in even_divider(arr):
+even_divider(arr)
+for elem in arr:
     print(elem, end = " ")
 
         
