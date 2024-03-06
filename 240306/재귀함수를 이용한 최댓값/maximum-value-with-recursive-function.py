@@ -6,10 +6,11 @@ def max_calculator(n):
         return 0
     
     global arr
-    if arr[n] >= max_calculator(n-1):
+    before = max_calculator(n-1)
+    if arr[n] >= before:
         return arr[n]
     
     else:
-        return max_calculator(n-1)
+        return before
 
 print(max_calculator(n))
