@@ -5,7 +5,7 @@ def last_common_multiple(n):
     global arr
     
     if n == 1:
-        return a[0]
+        return arr[0]
 
     lastone = last_common_multiple(n-1)
     
