@@ -3,7 +3,7 @@ n = int(input())
 
 # 튜플로 풀이
 scores = [tuple(input().split()) for _ in range(n)]
-scores.sort(key=lambda x: (x[1], x[2], x[3]), reverse = True)
+scores.sort(key=lambda x: (int(x[1]), int(x[2]), int(x[3])), reverse = True)
 
 
 for name, kor, eng, math in scores:
