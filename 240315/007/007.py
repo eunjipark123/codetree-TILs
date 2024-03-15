@@ -1,8 +1,28 @@
-# tuple로 풀기
-code, place, time = tuple(input().split())
-print(f"secret code : {code}")
-print(f"meeting point : {place}")
-print(f"time : {time}")
+# class로 풀기
+
+class Password:
+    def __init__(self, code, place, time):
+        self.code = code
+        self.place = place
+        self.time = time
+    
+    def print_pw(self):
+        print(f"secret code : {self.code}")
+        print(f"meeting point : {self.place}")
+        print(f"time : {self.time}")
+
+pw1 = tuple(input().split())
+code, place, time = pw1
+
+pw1_instance = Password(code, place, time)
+pw1_instance.print_pw()
+
+
+# # tuple로 풀기
+# code, place, time = tuple(input().split())
+# print(f"secret code : {code}")
+# print(f"meeting point : {place}")
+# print(f"time : {time}")
 
 # from datetime import datetime
 
