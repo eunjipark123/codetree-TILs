@@ -1,17 +1,16 @@
-class User:
-    def __init__(self, code_name, score):
-        self.code_name = code_name
-        self.score = score
-
 users = []
 
 for _ in range(5):
     code_name, score = tuple(input().split())
-    users.append(User(code_name, int(score)))
+    users.append((code_name, int(score)))
 
-min_idx = 0
+min_idx = 0 
 for i in range(1, 5):
-    if users[min_idx].score > users[i].score:
-        min_idx = i 
+    _, min_score = users[min_idx]
+    _, curr_user_score = users[i]
 
-print(users[min_idx].code_name, users[min_idx].score)
+    if min_score > curr_user_score:
+        min_idx = i
+
+code_name, score = users[min_idx]
+print(code_name, score)
