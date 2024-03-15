@@ -18,10 +18,5 @@ for _ in range(n):
     users.append(UserInfo(name, digit, region))
 
 
-max_idx = 0
-
-for i in range(1, n):
-    if users[max_idx].name < users[i].name:
-        max_idx = i
-
-users[max_idx].print_userinfo()
+users = sorted(users, key = lambda x: x.name, reverse = True)
+users[0].print_userinfo()
