@@ -17,5 +17,9 @@ for _ in range(n):
         rainy_days.append(Forecast(date, day, weather))
 
 
-rainy_days = sorted(rainy_days, key = lambda x: x.date)
-rainy_days[0].print_it()
+min_idx = 0
+for i in range(1, len(rainy_days)):
+    if rainy_days[min_idx].date > rainy_days[i].date:
+        min_idx = i
+
+rainy_days[min_idx].print_it()
