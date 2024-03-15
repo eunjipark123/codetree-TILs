@@ -1,18 +1,17 @@
-agents = [tuple(input().split()) for _ in range(5)]
+class User:
+    def __init__(self, code_name, score):
+        self.code_name = code_name
+        self.score = score
 
-class Agent:
-    def __init__(self, name, score):
-        self.name = name
-        self.score = int(score)
+users = []
 
-min_score = 101
-min_name = ""
+for _ in range(5):
+    code_name, score = tuple(input().split())
+    users.append(User(code_name, int(score)))
 
-for name, score in agents:
-    result = Agent(name, score)
-    
-    if result.score < min_score:
-        min_name = result.name
-        min_score = result.score
+min_idx = 0
+for i in range(1, 5):
+    if users[min_idx].score > users[i].score:
+        min_idx = i 
 
-print(min_name, min_score)
+print(users[min_idx].code_name, users[min_idx].score)
