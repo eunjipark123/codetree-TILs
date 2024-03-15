@@ -1,10 +1,29 @@
-# 국영수 순으로 우선순위, 높은 학생부터 출력
+# Class로 풀이
+# Class 정의
+class Score:
+    def __init__(self, name, k, e, m):
+        self.name = name
+        self.k = k
+        self.e = e
+        self.m = m
+
+    def print_score(self):
+        print(self.name, self.k, self.e, self.m)
+
+# 입력값 받기
 n = int(input())
 
-# 튜플로 풀이
-scores = [tuple(input().split()) for _ in range(n)]
-scores.sort(key=lambda x: (int(x[1]), int(x[2]), int(x[3])), reverse = True)
+# 빈 리스트 생성
+scores = []
 
+# 리스트에 인스턴스 넣기
+for i in range(n):
+    name, k, e, m = input().split()
+    scores.append(Score(name, int(k),int(e), int(m)))
 
-for name, kor, eng, math in scores:
-    print(name, kor, eng, math)
+# 정렬
+scores.sort(key=lambda x: (-x.k, -x.e, -x.m))
+
+# 출력
+for elem in scores:
+    elem.print_score()
